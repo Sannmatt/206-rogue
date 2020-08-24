@@ -162,7 +162,8 @@ header nav ul li a{
 	font-size: 1em;
 	line-height: 24px;
 	padding: 0;
-  	align-self: center;
+  	align-self: auto
+;
 }
 
 /*The widths are in a percentage!*/
@@ -170,7 +171,11 @@ footer {
 	border-top: 3px solid #eee;
 	margin: 0 auto;
 	text-align: center;
-	height: auto;
+	width: 100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 footer span {
 	font-family: 'Galada', cursive;
@@ -178,3 +183,69 @@ footer span {
 	color: #77a466;
 	font-size: 0.875em;
 }
+
+    /* Tablet styles here */
+ @media (min-width: 768px) {
+  header h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  header h1 span {
+    padding-right: 8px;
+  }
+
+  .bottom-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .section-one,
+  .section-two,
+  .section-three {
+    flex: 1;
+    padding: 3%;
+    align-self: flex-start;
+  }
+
+  .section-two {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+  }
+
+  .section-one h4,
+  .section-two h4,
+  .section-three h4 {
+    display: flex;
+    padding: 0;
+  }
+}
+@media all and (min-width:940px) {
+    /* Desktop styles here */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+	
+  }
+
+header {
+		justify-content: space-between;
+	}
+
+header h1 {
+		width: 27%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	header nav {
+		width: 50%;
+		border-top:none;
+	}
